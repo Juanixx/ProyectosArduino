@@ -48,7 +48,12 @@ void loop(){
  
   Serial.print("A.13 ");
   Serial.println(analogRead(A13));
- 
- 
- delay(3000);
+
+  Serial.print("A.14 ");
+  Serial.println(analogRead(A14));
+
+  Serial.print("A.15 ");
+  Serial.println(analogRead(A15)); 
+
+  delay(1000);
 }

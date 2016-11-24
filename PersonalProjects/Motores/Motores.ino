@@ -1,31 +1,77 @@
-//Para controlar los motores con el puente H L293D
-//Se definen los pines de los motores
+int motorPin = 4; //right side to IB - forward
+int motorPin2 = 7; //left side to IA - forward
+int motorPin3 = 6; //right side to IA - backward
+int motorPin4 = 5; //left side to IB - backward
 
-int motorA1=4;
-int motorA2=5;
-
-int motorB1=6;
-int motorB2=7;
-
-void setup(){
-  Serial.begin(9600);
-  pinMode(motorA1,OUTPUT);
-  pinMode(motorA2,OUTPUT);
-  pinMode(motorB1,OUTPUT);
-  pinMode(motorB2,OUTPUT);
-  
+void setup() {
+  Serial.begin(9600); 
 }
 
-void loop(){
-
-  
-  digitalWrite(motorA1,LOW);
-  digitalWrite(motorA2,LOW);
-  
-  
-  digitalWrite(motorB1,LOW);
-  digitalWrite(motorB2,HI);
-  
-  
+void loop()
+{
+  Adelante();
+  //Atras();
+  //Izquierda();
+  //Derecha();
+  //Detenidos();
 }
+
+void Adelante(){ 
+
+digitalWrite(motorPin, HIGH);
+
+digitalWrite(motorPin2, HIGH);
+
+digitalWrite(motorPin3, LOW);  
+
+digitalWrite(motorPin4, LOW);
+
+ }
+
+void Atras() {  
+
+digitalWrite(motorPin, LOW);  
+
+digitalWrite(motorPin2, LOW);  
+
+digitalWrite(motorPin3, HIGH);  
+
+digitalWrite(motorPin4, HIGH); 
+
+} 
+
+void Izquierda() {  
+
+digitalWrite(motorPin, HIGH);  
+
+digitalWrite(motorPin2, LOW);  
+
+digitalWrite(motorPin3, HIGH);  
+
+digitalWrite(motorPin4, LOW);
+
+ } 
+
+void Derecha() {  
+
+digitalWrite(motorPin, LOW);  
+
+digitalWrite(motorPin2, HIGH);
+
+digitalWrite(motorPin3, LOW);  
+
+digitalWrite(motorPin4, HIGH);
+
+ }
+ void Detenidos() {  
+
+digitalWrite(motorPin, LOW);  
+
+digitalWrite(motorPin2, LOW);
+
+digitalWrite(motorPin3, LOW);  
+
+digitalWrite(motorPin4, LOW);
+
+ }
 

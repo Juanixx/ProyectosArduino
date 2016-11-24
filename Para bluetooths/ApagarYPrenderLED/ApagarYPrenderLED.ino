@@ -10,16 +10,16 @@ Serial.println("Conectado al Bluetooth!");
 // set the data rate for the SoftwareSerial port
 mySerial.begin(9600);
 mySerial.println("Conectado a la pc");
-pinMode(9,OUTPUT); //Pin para pruebas
+pinMode(13,OUTPUT); //Pin para pruebas
 
 }
 void loop() // run over and over
 {
   if(led==1)
-    digitalWrite(9,HIGH);
+    digitalWrite(13,HIGH);
     else{
       if(led==0)
-    digitalWrite(9,LOW);
+    digitalWrite(13,LOW);
     }
 if (mySerial.available()){
 //Aquí se reciben los datos del teléfono
@@ -32,6 +32,9 @@ else{
   if(C=='a'){
 led=0;
 }
+else{
+  Serial.println("No entra pero si lee");
+  }
 
 }
 }

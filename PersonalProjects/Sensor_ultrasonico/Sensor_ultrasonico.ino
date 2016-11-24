@@ -21,8 +21,5 @@ void loop() {
   //Primer Sensor
   duracion = pulseIn(Pecho, HIGH);
   distancia = (duracion/2) / 29;            // calcula la distancia en centimetros
-  Serial.println(distancia);         // envia la palabra Alarma por el puerto serial
-
-  
-  
+  Serial.println(distancia);
 }

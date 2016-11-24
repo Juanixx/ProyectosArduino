@@ -1,8 +1,5 @@
 void setup() {
   Serial.begin(9600);
-  
-  pinMode(11,OUTPUT);
-  pinMode(9,OUTPUT);
 
 }
 
@@ -11,13 +8,13 @@ void loop() {
   
   
   Serial.print("      A0: ");
-  Serial.print(analogRead(A0));
+  Serial.println(analogRead(A0));
   
   Serial.print("      A1: ");
-  Serial.print(analogRead(A1));
+  Serial.println(analogRead(A1));
   
   Serial.print("      A2: ");
-  Serial.print(analogRead(A2));
+  Serial.println(analogRead(A2));
   
   Serial.print("      A3: ");
   Serial.println(analogRead(A3));

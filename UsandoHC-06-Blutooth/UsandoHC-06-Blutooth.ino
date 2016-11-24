@@ -1,5 +1,5 @@
 #include <SoftwareSerial.h>
-SoftwareSerial BT1(4,2); // TX, RX recorder que se cruzan
+SoftwareSerial BT1(4,2); // TX, RX recordar que se cruzan
 
 void setup()
    {
@@ -10,8 +10,9 @@ void setup()
 
 void loop()
    {
-       if (BT1.available())
+       if (BT1.available()){
            Serial.write(BT1.read());
+       }
        
        if (Serial.available())
           {  String S = GetLine();

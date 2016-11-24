@@ -1,16 +1,14 @@
-int randNumber;
+//int randNumber;
 int a=0;
 void setup(){
   Serial.begin(9600);
 }
 
 void loop(){
-  randomSeed(millis());    // genera una semilla para aleatorio a partir de la función millis()
-randNumber = random(1000);    // genera número aleatorio entre 0 y 255
+  //randomSeed(millis());    // genera una semilla para aleatorio a partir de la función millis()
+//randNumber = random(1000);    // genera número aleatorio entre 0 y 255
 
 if(a==0){
-  Serial.print("A.0 ");
-  Serial.println("600");
   
   Serial.print("A.1 ");
   Serial.println("300");
@@ -45,21 +43,25 @@ if(a==0){
   Serial.print("A.11 ");
   Serial.println("300");
 
-//Desde aquí se empieza a modificar
   Serial.print("A.12 ");
   Serial.println("600");
   
   Serial.print("A.13 ");
   Serial.println("300");
 
+  Serial.print("A.14 ");
+  Serial.println("600");
   
-  
+  Serial.print("A.15 ");
+  Serial.println("300");
+
+  Serial.print("A.16 ");
+  Serial.println("600");
   a++;  
 }
 
+//Desde aquí se empieza a modificar
 else{
-  Serial.print("A.0 ");
-  Serial.println("300");
   
   Serial.print("A.1 ");
   Serial.println("600");
@@ -100,8 +102,17 @@ else{
   Serial.print("A.13 ");
   Serial.println("600");
 
+  Serial.print("A.14 ");
+  Serial.println("300");
+  
+  Serial.print("A.15 ");
+  Serial.println("600");
+
+  Serial.print("A.16 ");
+  Serial.println("300");
+  
+
   a--;
-} 
- 
- delay(2000);
+}
+delay(1000);
 }

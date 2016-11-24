@@ -1,7 +1,7 @@
 void setup() {
   Serial.begin (9600);
-  pinMode(6,OUTPUT); //Motor Izquierda
-  pinMode(11,OUTPUT); //Motor Derecha
+  pinMode(9,OUTPUT); //Motor Izquierda
+  pinMode(10,OUTPUT); //Motor Derecha
 }
 
 void loop() {
@@ -54,16 +54,16 @@ if(analogRead(A1)<500||analogRead(A2)<500){
   
 
 void Derecha(){
-    analogWrite(6,127);
-    analogWrite(11,255);
+    analogWrite(9,0);
+    analogWrite(10,127);
 }
 
 void Izquierda(){
-    analogWrite(6,255);
-    analogWrite(11,127);
+    analogWrite(9,127);
+    analogWrite(10,0);
 }
 
 void Adelante(){
-    analogWrite(6,255);
-    analogWrite(11,255);
+    analogWrite(9,127);
+    analogWrite(10,127);
 }

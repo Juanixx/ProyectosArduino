@@ -1,7 +1,7 @@
 void setup() {
   Serial.begin (9600);
-  pinMode(6,OUTPUT); //Motor Izquierda
-  pinMode(11,OUTPUT); //Motor Derecha
+  pinMode(9,OUTPUT); //Motor Izquierda
+  pinMode(10,OUTPUT); //Motor Derecha
 }
 
 void loop() {
